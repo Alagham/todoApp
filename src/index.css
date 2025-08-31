@@ -1,0 +1,156 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.app {
+  max-width: 400px;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: white;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input */
+.task-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #0077b5;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #005c8f;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 8px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #0077b5;
+  color: white;
+}
+
+/* Task Item */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-text {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.edit-input {
+  flex: 1;
+  margin: 0 10px;
+  padding: 4px;
+  font-size: 1rem;
+}
+
+.actions button {
+  margin-left: 5px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #ffa500;
+  color: white;
+}
+
+.delete-btn {
+  background: #d11a2a;
+  color: white;
+}
+
+/* Footer */
+.remaining {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* --------------- Dark Mode (system preference) --------------- */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #f4f4f4;
+  }
+
+  .app {
+    background: #1e1e1e;
+    color: #f4f4f4;
+  }
+
+  .task-input {
+    background: #2a2a2a;
+    color: #fff;
+    border: 1px solid #555;
+  }
+
+  .filter-btn {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+
+  .filter-btn.active {
+    background: #0077b5;
+    color: white;
+  }
+
+  .task-item {
+    border-bottom: 1px solid #333;
+  }
+}
