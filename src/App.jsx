@@ -40,13 +40,13 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1 className="header">TODO List</h1>
+      <h2 className="header">TodoMatic</h2>
       <p>what needs to be done?</p>
 
       {/* Input */}
       <input
         type="text"
-        placeholder="Add a new task..."
+        placeholder=""
         value={newTask}
         onChange={(e) => setNewTask(e.target.value)}
         className="task-input"
@@ -70,7 +70,8 @@ export default function App() {
         ))}
       </div>
 
-      {/* Task list */}
+       <p className="remaining">{remaining} tasks remaining</p>
+
       <div className="task-list">
         {filteredTasks.map((task) => (
           <TodoItem
@@ -82,9 +83,6 @@ export default function App() {
           />
         ))}
       </div>
-
-      {/* Footer */}
-      <p className="remaining">{remaining} tasks remaining</p>
     </div>
   );
 }

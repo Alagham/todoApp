@@ -13,23 +13,24 @@ export default function TodoItem({ task, toggleComplete, deleteTask, editTask })
 
   return (
     <div className={`task-item ${task.completed ? "completed" : ""}`}>
-      <input
-        type="checkbox"
-        checked={task.completed}
-        onChange={() => toggleComplete(task.id)}
-      />
-
-      {isEditing ? (
+      <div>
         <input
-          type="text"
-          value={editText}
-          onChange={(e) => setEditText(e.target.value)}
-          className="edit-input"
+            type="checkbox"
+            checked={task.completed}
+            onChange={() => toggleComplete(task.id)}
         />
-      ) : (
-        <span className="task-text">{task.text}</span>
-      )}
 
+        {isEditing ? (
+            <input
+            type="text"
+            value={editText}
+            onChange={(e) => setEditText(e.target.value)}
+            className="edit-input"
+            />
+        ) : (
+            <span className="task-text">{task.text}</span>
+        )}
+      </div>
       <div className="actions">
         <button className="edit-btn" onClick={handleEdit}>
           {isEditing ? "Save" : "Edit"}

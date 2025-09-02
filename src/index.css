@@ -12,9 +12,14 @@ body {
   max-width: 400px;
   margin-top: 50px;
   padding: 20px;
-  border-radius: 12px;
+  /* border-radius: ; */
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   background: white;
+  
+  p{
+    text-align: center;
+    font-size: 12px;
+  }
 }
 
 .header {
@@ -24,28 +29,29 @@ body {
 
 /* Input */
 .task-input {
-  width: 100%;
-  padding: 10px;
+  width: 95%;
+  padding: 5px;
   margin-bottom: 10px;
   font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  /* border-radius: 6px; */
+  border: 2px solid black;
 }
 
 .add-btn {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 15px;
-  background: #0077b5;
+  background: black;
   border: none;
-  border-radius: 6px;
+  font-size: 10px;
+  /* border-radius: 6px; */
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 
 .add-btn:hover {
-  background: #005c8f;
+  background: #d11a2a;
 }
 
 /* Filters */
@@ -57,26 +63,28 @@ body {
 
 .filter-btn {
   flex: 1;
-  padding: 8px;
-  margin: 0 5px;
+  padding: 3px;
+  margin: 0px 10px;
   border: 1px solid #ccc;
-  background: #eee;
-  border-radius: 6px;
+  background: #fff;
+  font-size: 8px;
+  /* border-radius: 6px; */
   cursor: pointer;
 }
 
 .filter-btn.active {
-  background: #0077b5;
+  background: #d11a2a;
   color: white;
 }
 
 /* Task Item */
 .task-item {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
+  /* padding: 8px; */
+  /* border-bottom: 1px solid #ddd; */
 }
 
 .task-item.completed .task-text {
@@ -98,15 +106,18 @@ body {
 
 .actions button {
   margin-left: 5px;
-  padding: 4px 8px;
-  border: none;
-  border-radius: 6px;
+  padding: 2px 8px;
+  width: 115px;
+  font-size: 10px;
+  border: 1.5px solid black;
+  /* border-radius: 6px; */
   cursor: pointer;
 }
 
 .edit-btn {
-  background: #ffa500;
-  color: white;
+  background: #fff;
+  color: black;
+  
 }
 
 .delete-btn {
@@ -117,7 +128,8 @@ body {
 /* Footer */
 .remaining {
   margin-top: 15px;
-  text-align: center;
+  margin-right: 150px;
+  text-align: right;
   font-weight: bold;
 }
 
